@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio Boas-vindas</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.4em;
+      }
+      input {
+        width: 120px;
+        height: 50px;
+        padding: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Boas vindas</h1>
+    <input type="button" value="Inicie o desafio" onclick="clica()" />
+    <script>
+      function clica() {
+        var nome = window.prompt("Qual é seu nome ?"); // var nome Guarda o valor que usuário digita 
+        var idade = window.prompt(`Olá ${nome}! Quantos anos você tem ?`);//Var idade guarda o valor que usuário digita 
+        window.alert( `Acabei de conhecer ${nome},que tem ${idade} anos de idade. `  );
+      }
+    </script>
+  </body>
+</html>
