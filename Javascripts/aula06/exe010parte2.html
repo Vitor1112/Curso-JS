@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imigração</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input{
+        
+        width: 100px;
+        border-radius: 5px;
+      
+        
+    }
+        div#resultado{
+        margin-top: 20px;
+    }
+   </style>
+    </style>
+</head>
+<body>
+    <h1>Teste de Imigração</h1>
+   Digite o País <input type="text" name="ipais" id="ipais">
+    <input type="button" value="Verificar" onclick="verifica()">
+    <div id="resultado">
+
+    </div>
+
+    <script>
+        function verifica(){
+            var pais =window.document.getElementById('ipais')
+            var resultado1 = document.getElementById('resultado')
+            var res = (pais.value) // é obrigatório
+
+           resultado.innerHTML = `você esta vivendo em <strong>${res}</strong>`
+
+            if( pais.value.toLowerCase() != 'brasil'){
+                resultado.innerHTML += `<p> Você é brasileiro </p>`
+            }else{
+                resultado.innerHTML += `<p>você é estrangeira</p>`
+            }
+            resultado.innerHTML += `<p> você  esta vivendo fora do País </p>`
+        }
+    </script>
+</body>
+</html>
