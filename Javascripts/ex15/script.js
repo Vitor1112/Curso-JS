@@ -5,7 +5,7 @@ function verificar() {
     var resultado = document.getElementById("resultado");
     
     
-   // se o cara não digitou ano ou então valor digitado é maior que ano atual
+    // se o cara não digitou ano ou então valor digitado é maior que ano atual
     if (formularioAno.value.length == 0 || Number(formularioAno.value) > ano) {
         window.alert('[ERROR] Verifique seus dados e tente novamente!');
     } else {
@@ -17,7 +17,7 @@ function verificar() {
         img.setAttribute('id','foto') // para coloca imagem
 
 
-        if (fsex[0].checked) {
+        if (fsex[0].checked) { // Primeira condição
             genero = 'Homem';
             if (idade >= 0 && idade < 10){
                 // criança
@@ -33,24 +33,26 @@ function verificar() {
                 //idoso
                 img.setAttribute('src','foto-idosa-m.jpg')
             }
-              
+         
+            // Parte dos dados da Mulher 
 
 
-        } else if (fsex[1].checked) {
+        } else if (fsex[1].checked) { // Segunda condição
             genero = 'Mulher';
             if(idade >= 0 && idade < 10 ){
-                  // criança
-                  img.setAttribute('src','foto-criança-f.jpg')
-            }else if (idade < 21){
-                // jovem
-                img.setAttribute('src','foto-jovem-f.jpg')
-            }else if (idade < 50){
-                 //adulto
-                 img.setAttribute('src','foto-adulta-f.jpg')
-            }else{
-                //idoso
-                img.setAttribute('src','foto-idosa-f.jpg')
-            }
+                // criança
+                img.setAttribute('src','foto-criança-f.jpg')
+          }else if (idade < 21){
+              // jovem
+              img.setAttribute('src','foto-jovem-f.jpg')
+          }else if (idade < 50){
+               //adulto
+               img.setAttribute('src','foto-adulta-f.jpg')
+          }else{
+              //idoso
+              img.setAttribute('src','foto-idosa-f.jpg')
+          }
+         
 
         }
          
