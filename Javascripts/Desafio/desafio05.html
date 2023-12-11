@@ -1,31 +1,54 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conversor de Medidas</title>
-    <style>
-      body {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1em;
-        
-      }
-      input {
-        width: 100px;
-        height: 60px;
-        padding: 10px;
-        text-align: center;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Conversor de Medidas</h1>
-    <input type="button" value="Converter" onclick="clicar()" />
-    <script>
-      function clicar(){
 
-        var metro = Number
-}
+    <style>
+        div#res
+        {
+            font: normal 15pt arial;
+        }
+        input
+        {
+            font: normal 15pt arial;
+            width: 150px;
+            height: 50px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <h1>Conversor de medidas</h1>
+    </header>
+
+    <div>
+        <input type="button" value="Converter" onclick="clicar()">
+    </div>
+
+    <div id = "resposta1">
+        <p>Clique no botão acima para inciar.</p>
+    </div>
+
+    <script>
+        function clicar() {   
+
+            var numero = Number(window.prompt('Digite a distância em (m)'))
+            var resposta = document.getElementById('resposta1')
+            var km = (numero /1000).toFixed(3)
+            var Hm = (numero/100).toFixed(2)
+            var dam =(numero/10)
+            var dec = (numero * 10)
+            var cm = (numero * 100)
+            var mm = (numero * 1000)
+
+           
+        }
     </script>
-  </body>
+    
+</body>
 </html>
