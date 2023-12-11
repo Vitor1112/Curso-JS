@@ -1,54 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Conversor de Medidas</title>
 
     <style>
-        div#res
-        {
-            font: normal 15pt arial;
-        }
-        input
-        {
-            font: normal 15pt arial;
-            width: 150px;
-            height: 50px;
-        }
+      div#res {
+        font: normal 15pt arial;
+      }
+      input {
+        font: normal 15pt arial;
+        width: 150px;
+        height: 50px;
+      }
     </style>
-
-</head>
-<body>
-
+  </head>
+  <body>
     <header>
-        <h1>Conversor de medidas</h1>
+      <h1>Conversor de medidas</h1>
     </header>
 
     <div>
-        <input type="button" value="Converter" onclick="clicar()">
+      <input type="button" value="Converter" onclick="clicar()" />
     </div>
 
-    <div id = "resposta1">
-        <p>Clique no botão acima para inciar.</p>
+    <div id="resposta1">
+      <p>Clique no botão acima para inciar.</p>
     </div>
 
     <script>
-        function clicar() {   
+      function clicar() {
 
-            var numero = Number(window.prompt('Digite a distância em (m)'))
-            var resposta = document.getElementById('resposta1')
-            var km = (numero /1000).toFixed(3)
-            var Hm = (numero/100).toFixed(2)
-            var dam =(numero/10)
-            var dec = (numero * 10)
-            var cm = (numero * 100)
-            var mm = (numero * 1000)
 
-           
-        }
+        var numero = Number(window.prompt("Digite a distância em (m)"));
+        var resposta = document.getElementById("resposta1");
+        var km = (numero / 1000).toFixed(3).replace(".", ",");
+        var hm = (numero / 100).toFixed(3).replace(".", ",");
+        var dam = (numero / 10).toFixed(3).replace(".", ",");
+        var dm = (numero * 10).toFixed(2).replace(".", ",");
+        var cm = (numero * 100).toFixed(2).replace(".", ",");
+        var mm = (numero * 1000).toFixed(1).replace(".", ",");
+
+        resposta.innerHTML = `<p>A distância de ${numero  .toFixed(2).replace(".", ",")} metros , corresponde a....</p>`;
+        resposta.innerHTML += `<p> ${km} quilômetros (Km) <p>`;
+        resposta.innerHTML += `<p> ${km} quilômetros (Km) </p>`;
+        resposta.innerHTML += `<p> ${hm} hectômetros (Hm) </p>`;
+        resposta.innerHTML += `<p> ${dam} decâmetros (Dam) </p>`;
+        resposta.innerHTML += `<p>${dm} decímetros (dm) </p>`;
+        resposta.innerHTML += `<p> ${cm} centímetros (cm) </p>`;
+        resposta.innerHTML += `<p> ${mm} milímetros (mm) </p>`;
+        
+      }
     </script>
-    
-</body>
+  </body>
 </html>
