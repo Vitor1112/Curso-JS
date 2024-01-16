@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ano Bissexto </title>
+
+    <style>
+         mark-sim
+        {
+            color: green;
+            background-color: rgb(118, 233, 118);
+        }
+        mark-não
+        {
+            color: rgb(161, 20, 20);
+            background-color: rgba(209, 12, 21, 0.253);
+        }
+        input
+        {
+            font: normal 15px arial;
+            width: 200px;
+            height: 50px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <h1><strong>Ano Bissexto</strong></h1>
+    </header>
+
+    <div>
+        <input type="button" value="Calcular" onclick="clica()">
+    </div>
+
+    <div id="res">
+        <p>Informe um ano para saber ser ele é Bissexto</p>
+    </div>
+
+    <body>
+        <script>
+            function clica()  {
+                let ano = Number(window.prompt('Qual é o ano que você quer verificar ?'))
+                let resultado = document.getElementById('res')
+                resultado.innerHTML = (`<h2> Analisando o ano de ${ano}...<h2>`)
+
+                if(ano % 4 == 0){
+                    resultado.innerHTML += (`<p> O ano de ${ano}  <mark -sim><strong>É BISSEXTO</strong></mark>\u{2705}</p>`)
+                }else{
+                    resultado.innerHTML += (`<p>O ano de ${ano} <mark-não><strong>NÃO É BISSEXTO</strong></mark-não>\u{274C}</p>`)
+                }
+            }
+        </script>
+        </body
