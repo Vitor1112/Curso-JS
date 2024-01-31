@@ -118,6 +118,9 @@ function soma(...valores) { // Utilizando os 3 pontinhos como parâmetro Rest
 
 console.log(soma(9, 1, 2));
 
+
+
+
  
 
 
